@@ -88,7 +88,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4J9-4p-P0U" id="CX6-my-k8l">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="Sgj-WY-fRI">
@@ -99,7 +99,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where the Sun Goes (ft. Stevie Wonder)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUT-Qb-XB5">
-                                                    <rect key="frame" x="81" y="8.5" width="286" height="70"/>
+                                                    <rect key="frame" x="81" y="9" width="286" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="EMD-VI-pbB"/>
                                                     </constraints>
@@ -141,7 +141,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="q69-aH-QST" id="koz-v6-zvr"/>
-                        <segue destination="tfg-Lo-P58" kind="showDetail" id="Z6X-ZE-Hy1"/>
+                        <segue destination="tfg-Lo-P58" kind="showDetail" identifier="VideoVC" id="Z6X-ZE-Hy1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -167,14 +167,30 @@
                                     <constraint firstAttribute="height" constant="205" id="sbQ-D8-MN1"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feL-w8-Z91">
+                                <rect key="frame" x="21" y="255" width="333" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="aV5-PZ-76h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="feL-w8-Z91" firstAttribute="leading" secondItem="qWz-6y-tR8" secondAttribute="leadingMargin" constant="5" id="6cB-xO-Vow"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="feL-w8-Z91" secondAttribute="trailing" constant="5" id="7vt-gg-hKm"/>
                             <constraint firstItem="icD-65-j2Z" firstAttribute="leading" secondItem="qWz-6y-tR8" secondAttribute="leading" id="bHv-8t-dnJ"/>
                             <constraint firstAttribute="trailing" secondItem="icD-65-j2Z" secondAttribute="trailing" id="fkp-0G-2sU"/>
+                            <constraint firstItem="feL-w8-Z91" firstAttribute="top" secondItem="icD-65-j2Z" secondAttribute="bottom" constant="50" id="oS3-JC-9bx"/>
                             <constraint firstItem="icD-65-j2Z" firstAttribute="top" secondItem="qWz-6y-tR8" secondAttribute="top" id="qDS-1i-vcw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLbl" destination="feL-w8-Z91" id="ax2-A6-Ars"/>
+                        <outlet property="webView" destination="icD-65-j2Z" id="ixR-tS-bvl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d66-p2-iZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

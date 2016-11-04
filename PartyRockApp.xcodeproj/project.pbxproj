@@ -71,7 +71,6 @@
 				086E30AE1DC8F63700BE95B2 /* Main.storyboard */,
 				086E30B11DC8F63700BE95B2 /* Assets.xcassets */,
 				086E30B61DC8F63700BE95B2 /* Info.plist */,
-				086E30C21DC9D8E500BE95B2 /* VideoVC.swift */,
 			);
 			path = PartyRockApp;
 			sourceTree = "<group>";
@@ -80,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				086E30AC1DC8F63700BE95B2 /* MainVC.swift */,
+				086E30C21DC9D8E500BE95B2 /* VideoVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -350,6 +350,7 @@
 				086E30BB1DC8F63700BE95B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
